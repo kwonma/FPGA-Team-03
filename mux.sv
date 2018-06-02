@@ -1,9 +1,9 @@
 module multiplexer(
-	input [3:0] key_mux,
-	input [3:0] ir_mux,
-	input [3:0] b_mux,
+	input [7:0] key_mux,
+	input [7:0] ir_mux,
+	input [7:0] b_mux,
 	input [1:0] dip,
-	output logic [8:0] mux_en
+	output logic [7:0] mux_en
 	);
 	
 always_comb	
