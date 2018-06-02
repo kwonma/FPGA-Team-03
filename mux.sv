@@ -6,7 +6,8 @@ module multiplexer(
 	output logic [8:0] mux_en
 	);
 	
-always_comb	begin
+always_comb	
+	begin
 		case(dip)
 			0:		mux_en = key_mux;
 			1:		mux_en = ir_mux;
