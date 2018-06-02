@@ -11,6 +11,11 @@ module top(
   logic [31:0] ir_data;
   logic [7:0] mux_en;
 
+  //built in module
+  OSCH #("2.08") osc_int (
+    .STDBY(1'b0),
+    .OSC(clock_2MHz),
+    .SEDSTDBY());
   
   
   b_mux = ~button_in;
