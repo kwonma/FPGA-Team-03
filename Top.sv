@@ -1,5 +1,30 @@
 module top(
-  input logic [1:0] key,
-  input logic ir,
-  input logic [7:0] but,
+  input logic clk,
+  input logic kb_in_serial,
+  input logic ir_in,
+  input logic [7:0] button_in,
+  input logic [1:0] dip,
   output logic [2:0] snes_out);
+  
+  logic [7:0] key_mux, ir_mux, b_mux;
+  logic [10:0] kb_data;
+  logic [31:0] ir_data;
+  logic [7:0] mux_en;
+
+  
+  
+  b_mux = ~button_in;
+
+  multiplexer mux(
+    .key_mux(key_mux),
+    .ir_mux(ir_mux),
+    .b_mux(b_mux),
+    .dip(dip),
+    .mux_en(mux_en));
+  
+  
+  
+  
+  
+  
+endmodule
