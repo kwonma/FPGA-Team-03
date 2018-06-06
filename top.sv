@@ -11,7 +11,7 @@ module top(
   logic [31:0] ir_data;
   logic [7:0] mux_en;
 
-  //built in module
+  //built in module that access's our chip's oscillator 
   OSCH #("2.08") osc_int (
     .STDBY(1'b0),
     .OSC(clock_2MHz),
